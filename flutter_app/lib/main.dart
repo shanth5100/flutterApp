@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/widgets/Main.dart';
+// import 'package:flutter_app/widgets/Main.dart';
+import 'package:flutter_app/widgets/sidemenu/Sidemenu.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(Sidemenu());
+  // runApp(MyApp());
 }
 
 // class MyApp extends StatelessWidget {
