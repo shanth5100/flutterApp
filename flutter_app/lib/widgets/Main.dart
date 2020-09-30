@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/widgets/util/Galary.dart';
 import 'package:flutter_app/widgets/util/Home.dart';
 
 class MyApp extends StatelessWidget {
@@ -6,7 +7,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "FLutter Navigation and Route",
       theme: ThemeData(primarySwatch: Colors.green),
-      home: Home(),
+      initialRoute: '/', // Named routes
+      routes: {'/': (context) => Home(), '/galary': (context) => Galary()},
+      // home: Home(),
     );
   }
 }
