@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/widgets/util/Home.dart';
 
 class Nav_Draw extends StatelessWidget {
   Widget build(BuildContext context) {
@@ -21,7 +22,7 @@ class Nav_Draw extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.add_to_home_screen),
             title: Text("HomeScreen"),
-            onTap: () => {},
+            onTap: () => Home(),
           ),
           ListTile(
             leading: Icon(Icons.add),
