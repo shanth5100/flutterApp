@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/widgets/Login.dart';
 import 'package:flutter_app/widgets/Main.dart';
 // import 'package:flutter_app/widgets/sidemenu/Sidemenu.dart';
 
 void main() {
-  // runApp(Sidemenu());
-  runApp(MyApp());
+  // runApp(Sidemenu()); // dynamic menu items
+  runApp(MyApp()); // static menu items OR Login app.
+  // runApp(Login());
 }
 
 // class MyApp extends StatelessWidget {
