@@ -13,9 +13,10 @@ class Login extends StatefulWidget {
 class LoginState extends State<Login> {
   final GlobalKey<FormState> login_form = GlobalKey<FormState>();
   bool autoValidate = false;
+  int id;
   String name;
-  String email;
-  String password;
+  double salary;
+  int age;
 
   @override
   Widget build(BuildContext context) {
@@ -60,9 +61,9 @@ class LoginState extends State<Login> {
         ),
         TextFormField(
             keyboardType: TextInputType.emailAddress,
-            onSaved: (String emilValue) {
-              email = emilValue;
-            },
+            // onSaved: (String emilValue) {
+            //   email = emilValue;
+            // },
             validator: emailValidate,
             decoration: const InputDecoration(
               labelText: 'Email',
@@ -95,7 +96,7 @@ class LoginState extends State<Login> {
     if (login_form.currentState.validate()) {
       print("IF block,  No errors ");
       ApiDataSource apiDataSource = ApiDataSource();
-      apiDataSource.login(email, password);
+      // apiDataSource.login(email, password);
       login_form.currentState.save();
     } else {
       print("ELSE block,  errors ");

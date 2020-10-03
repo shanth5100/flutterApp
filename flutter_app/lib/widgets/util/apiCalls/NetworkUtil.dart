@@ -28,16 +28,9 @@ class NetworkUtil {
 
     const reqHeaders = {"Content-Type": "application/json"};
     // var urlPath = Uri.https(url, "/oauth/token", params);
-    print("urlPath");
+    print("urlPath: " + url);
 
-    return http
-        .post(url + "/oauth/token",
-            headers: {
-              HttpHeaders.contentTypeHeader: "application/json"
-            }, //reqHeaders,
-            body: body,
-            encoding: encoding)
-        .then((http.Response response) {
+    return http.post(url).then((http.Response response) {
       String resp = response.body;
       final int statusCode = response.statusCode;
       if (statusCode < 200 || statusCode > 400 || json == null) {

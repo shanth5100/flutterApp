@@ -9,7 +9,7 @@ class ApiDataSource {
     // http://test-api.124apps.com/bills/auth (or)cloud
     // print(Config);
 
-    // return networkUtil.login(Config["authBaseUrl"], params);
-    return networkUtil.login(Config["authBaseUrl"], username, password);
+    return networkUtil.login(Config["myUrl"], username, password);
+    // return networkUtil.login(Config["authBaseUrl"], username, password);
   }
 }
